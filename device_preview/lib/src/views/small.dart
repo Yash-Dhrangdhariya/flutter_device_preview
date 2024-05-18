@@ -1,7 +1,6 @@
 import 'package:device_preview/src/state/store.dart';
 import 'package:device_preview/src/views/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 import 'tool_panel/tool_panel.dart';
@@ -10,12 +9,12 @@ import 'tool_panel/tool_panel.dart';
 class DevicePreviewSmallLayout extends StatelessWidget {
   /// Create a new panel from the given tools grouped as [slivers].
   const DevicePreviewSmallLayout({
-    Key? key,
+    super.key,
     required this.maxMenuHeight,
     required this.scaffoldKey,
     required this.onMenuVisibleChanged,
     required this.slivers,
-  }) : super(key: key);
+  });
 
   /// The maximum modal menu height.
   final double maxMenuHeight;
@@ -69,10 +68,7 @@ class DevicePreviewSmallLayout extends StatelessWidget {
 }
 
 class _BottomToolbar extends StatelessWidget {
-  const _BottomToolbar({
-    Key? key,
-    required this.showPanel,
-  }) : super(key: key);
+  const _BottomToolbar({required this.showPanel});
 
   final VoidCallback showPanel;
 

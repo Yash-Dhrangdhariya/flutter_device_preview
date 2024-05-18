@@ -2,17 +2,13 @@ import 'package:device_preview/src/state/store.dart';
 import 'package:device_preview/src/views/theme.dart';
 import 'package:device_preview/src/views/tool_panel/tool_panel.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
 /// The tool layout when the screen is large.
 class DervicePreviewLargeLayout extends StatefulWidget {
   /// Create a new panel from the given tools grouped as [slivers].
-  const DervicePreviewLargeLayout({
-    Key? key,
-    required this.slivers,
-  }) : super(key: key);
+  const DervicePreviewLargeLayout({super.key, required this.slivers});
 
   /// The sections containing the tools.
   ///
@@ -20,7 +16,7 @@ class DervicePreviewLargeLayout extends StatefulWidget {
   final List<Widget> slivers;
 
   @override
-  _DervicePreviewLargeLayoutState createState() =>
+  State<DervicePreviewLargeLayout> createState() =>
       _DervicePreviewLargeLayoutState();
 }
 

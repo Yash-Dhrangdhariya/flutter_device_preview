@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 /// An icon for a [TargetPlatform].
 class TargetPlatformIcon extends StatelessWidget {
@@ -7,10 +6,10 @@ class TargetPlatformIcon extends StatelessWidget {
   ///
   /// A [color] can be given to customize the icon color.
   const TargetPlatformIcon({
-    Key? key,
+    super.key,
     required this.platform,
     this.color,
-  }) : super(key: key);
+  });
 
   final Color? color;
   final TargetPlatform platform;
